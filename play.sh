@@ -6,4 +6,4 @@ NOW=`date +%s%3N`
 DIFF=`echo "scale=3; ($TARGET_MILLIS - $NOW) / 1000.0" | bc`
 echo "SLEEP $DIFF"
 sleep $DIFF
-mplayer -novideo /music/$1
+mplayer -novideo /music/"$@"
